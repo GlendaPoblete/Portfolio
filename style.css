@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Fugaz+One&family=Nunito&display=swap');
+
+/* || RESET */
+*,
+*::after,
+*::before {
+    margin: 1rem 0;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+input,
+button,
+textarea {
+    font: inherit
+    
+}
+
+/* || VARIABLES */
+:root {
+    /* FONTS */
+    --FF: "Poppins", sans-serif;
+    --FF-HEADINGS: "Fugaz One", cursive;
+    --FS: clamp(1rem, 2.2vh, 1.5rem);
+
+    /* COLORS */
+    --BGCOLOR: #6E6E6E;
+    --BODY-FONTCOLOR: aliceblue;
+    --FONT-COLOR: whitesmoke;
+    --LISTFONT-COLOR: #2F2F2F;
+    --LINK-ACTIVE: aliceblue;
+    --LINK-COLOR: #2F2F2F;
+    --NAV-BGCOLOR: #e3aa31;
+    --HILIGHT-FONTCOLOR: #e3aa31;
+}
+
+
+/* || GENERAL STYLES */
+
+html {
+    scroll-behavior: smooth;
+    font-size: var(--FS);
+    font-family: var(--FF);
+    background-color: var(--BGCOLOR);
+}
+
+
+body {
+    background-color: var(--BGCOLOR);
+    color: var(--BODY-FONTCOLOR);
+    min-height: 100vh;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    margin-inline: 1rem;
+}
+li a, 
+li a:visited {
+    text-decoration: none;
+    color: var(--LISTFONT-COLOR)
+}
+
+li a:hover,
+li a:focus {
+    background: var(--NAV-BGCOLOR)
+}
+
+.intro {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2%;
+}
+
+.intro-text {
+    order: 1;
+}
+
+.intro-text h1 {
+    font-size: 10rem;
+}
+.intro-text h2 {
+    font-size: 5rem;
+    color: var(--FONT-COLOR);
+}
+
+
+
+.image {
+    order: 2;
+    width: 650px;
+    height: 500px;
+}
+
+h2 {
+    font-size: 3rem;
+    color: var(--HILIGHT-FONTCOLOR);
+}
+h1 {
+    font-size: 4rem;
+    color: var(--HILIGHT-FONTCOLOR);
+    text-transform: uppercase;
+}
+
+.container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.moving-list {
+    font-weight: bold;
+    display:flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    animation: moveLeftToRight 15s linear infinite;
+}
+
+.moving-list li {
+    margin-right: 10px;
+}
+
+@keyframes moveLeftToRight {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+  }
+
+.video-container {
+    border: 2px solid var(--HILIGHT-FONTCOLOR);
+    background-color: var(--NAV-BGCOLOR);
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.video-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/*   *EXPERIENCE* */
+
+.experiences {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.tenure {
+    flex-basis: 100px;
+    text-align:justify;
+    font-size: 24px;
+    position: relative;
+}
+
+.tenure span {
+    background-color: #666;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+.tenure::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.tenure::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: var(--LISTFONT-COLOR);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.content {
+    flex-grow: 1;
+    padding-left: 20px;
+}
+
+.content h3 {
+    font-size: 24px;
+    margin: 0 0 10px 0;
+}
+
+.location {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: var(--BODY-FONTCOLOR);
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ddd;
+}
+
+/*   *CONTACT* */
+
+.contact-container {
+    display: block;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--BGCOLOR);
+    color: var(--HILIGHT-FONTCOLOR);
+}
+
+.contact-image {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-image: url(/img/contact.png);
+    text-align: right;
+    padding-top: 31%;
+    padding-right: 10%;
+    font-size: 4rem;
+}
+
+.contact-form {
+    flex: 1;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: var(--BGCOLOR);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group label span {
+    color: var(--NAV-BGCOLOR);
+}
+
+.name-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.name-fields input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--LISTFONT-COLOR);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--NAV-BGCOLOR);
+}
+
