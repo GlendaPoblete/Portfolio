@@ -53,14 +53,40 @@
                <iframe src="https://www.loom.com/embed/5580e111fb16414e97c02ce0edc95972?sid=db08f311-b7ce-41f5-85b3-b868e19a31f1" width="1175" height="600" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
             </div>
         </article>
-            <p class="center">
-                <a href="#">Back To Top</a>
-            </p>
+            
         
     </header>
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+
 
     <footer>
-        <p>Copyright &copy; Glenda Poblete</p>
+        <p>Copyright &copy; 2025 Glenda Poblete</p>
     </footer>
+    <script src="script.js"></script>
+
+    
 </body>
 </html>

@@ -145,9 +145,10 @@ h1 {
     }
   }
 
+
 .video-container {
-    border: 2px solid var(--HILIGHT-FONTCOLOR);
-    background-color: var(--NAV-BGCOLOR);
+    /* border: 2px solid var(--NAV-BGCOLOR); */
+    background-color: var(--BGCOLOR);
     border-radius: 10px;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -174,7 +175,6 @@ h1 {
 }
 
 .tenure span {
-    background-color: #666;
     padding: 10px 20px;
     border-radius: 5px;
     position: relative;
@@ -226,26 +226,30 @@ h1 {
     color: #ddd;
 }
 
+
+
 /*   *CONTACT* */
 
 .contact-container {
-    display: block;
-    height: 80vh;
+    display: flex;
+    height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: var(--BGCOLOR);
-    color: var(--HILIGHT-FONTCOLOR);
+    background-color: var(--LINK-COLOR);
 }
 
 .contact-image {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.contact-image img {
     max-width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
-    background-image: url(/img/contact.png);
-    text-align: right;
-    padding-top: 31%;
-    padding-right: 10%;
-    font-size: 4rem;
 }
 
 .contact-form {
@@ -256,6 +260,10 @@ h1 {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
 
 .input-group {
     margin-bottom: 20px;
@@ -269,7 +277,7 @@ h1 {
 }
 
 .input-group label span {
-    color: var(--NAV-BGCOLOR);
+    color: var(--LINK-COLOR);
 }
 
 .name-fields {
@@ -293,18 +301,114 @@ h1 {
 }
 
 button {
-    width: 100%;
     padding: 15px;
-    background-color: var(--LISTFONT-COLOR);
+    background-color: var(--LINK-COLOR);
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    
 }
 
 button:hover {
     background-color: var(--NAV-BGCOLOR);
+} 
+/* .contact-container {
+    display: block;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--BGCOLOR);
+    color: var(--HILIGHT-FONTCOLOR);
+
+.contact-image {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-image: url(/img/contact.png);
+    text-align: right;
+    padding-top: 36%;
+    padding-right: 10%;
+    font-size: 4rem;
 }
 
+
+
+.contact-form {
+    flex: 1;
+    padding: 40px;
+    box-sizing: border-box;
+    background-color: var(--BGCOLOR);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+/* .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+} */
+
+.input-group label span {
+    color: var(--NAV-BGCOLOR);
+}
+
+.name-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.name-fields input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+} 
+
+
+
+
+/*DISAPPEARING BACK TO TOP BUTTON */
+#myBtn {
+    display: none; /*Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: var(--LINK-COLOR); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+
+  footer {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Horizontally center the content */
+    text-align: center; /* Center the text in case of multi-line content */
+    color: var(--LISTFONT-COLOR); /* Optional: Text color
+
+}
