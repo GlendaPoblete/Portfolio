@@ -235,12 +235,12 @@ h1 {
     height: 100vh;
     align-items: center;
     justify-content: center;
-    background-color: var(--LINK-COLOR);
+    background-color: var(--BGCOLOR);
 }
 
 .contact-image {
-    flex: 1.5;
-    display: flex;
+    flex: 1.25;
+    /* display:inline-flex; */
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
@@ -315,46 +315,6 @@ button {
 button:hover {
     background-color: var(--NAV-BGCOLOR);
 } 
-/* .contact-container {
-    display: block;
-    height: 80vh;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--BGCOLOR);
-    color: var(--HILIGHT-FONTCOLOR);
-
-.contact-image {
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-    background-image: url(/img/contact.png);
-    text-align: right;
-    padding-top: 36%;
-    padding-right: 10%;
-    font-size: 4rem;
-}
-
-
-
-.contact-form {
-    flex: 1;
-    padding: 40px;
-    box-sizing: border-box;
-    background-color: var(--BGCOLOR);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-
-.input-group {
-    margin-bottom: 20px;
-}
-
-/* .input-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-} */
 
 .input-group label span {
     color: var(--NAV-BGCOLOR);
